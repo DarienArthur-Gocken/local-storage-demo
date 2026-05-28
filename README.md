@@ -16,8 +16,9 @@ Components:
 Sticky Note
     - Holds the text.
     - little dots in the corner.
-    - little dots let you change sticky note color & text color.
+    - little dots let you change sticky note color & text color. (color picker)
     - little dots also let you delete a note.
+    - click and drag to sort
 
 Add Button
     - adds a new sticky note.
