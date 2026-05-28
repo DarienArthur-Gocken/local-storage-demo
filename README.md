@@ -1,16 +1,23 @@
-# React + Vite
+# Plan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create a app using local storage.
+The app will be a to-do list.
+Uses react.
 
-Currently, two official plugins are available:
+post-it note type visuals.
+add button on the end of the post it notes.
+click on the post-it note to edit the text.
+can click on the add button, adds a new post it note, can start typing immediately to put in text.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+when you add or edit the post it notes, it saves this all to local storage.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Components:
+Sticky Note
+    - Holds the text.
+    - little dots in the corner.
+    - little dots let you change sticky note color & text color.
+    - little dots also let you delete a note.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Add Button
+    - adds a new sticky note.
