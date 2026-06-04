@@ -27,7 +27,7 @@ export default function StickyNote({ note, onUpdate, onDelete }) {
     }, [note.text]);
 
     return (
-        <div className="sticky-note" style={{ backgroundColor: note.backgroundColor, color: note.textColor, }}>
+        <div className="sticky-note" style={{ backgroundColor: note.backgroundColor}}>
             <div className="note-menu">
                 <button className="menu-button" onClick={() => setMenuOpen((prev) => !prev) }>
                     ⋮
@@ -65,7 +65,7 @@ export default function StickyNote({ note, onUpdate, onDelete }) {
             </div>
 
             <textarea ref={textareaRef} className="note-textarea" placeholder="Write something..." value={note.text}
-                onChange={(e) => onUpdate(note.id, { text: e.target.value, })}/>
+                style={{ color: note.textColor }} onChange={(e) => onUpdate(note.id, { text: e.target.value, })}/>
         </div>
     );
 }
