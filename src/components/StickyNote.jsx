@@ -27,14 +27,14 @@ export default function StickyNote({ note, onUpdate, onDelete }) {
     }, [note.text]);
 
     return (
-        <div className="sticky-note" style={{ backgroundColor: note.backgroundColor}}>
+        <div className="sticky-note" style={{ backgroundColor: note.backgroundColor}} onClick={() => setMenuOpen(false)}>
             <div className="note-menu">
-                <button className="menu-button" onClick={() => setMenuOpen((prev) => !prev) }>
+                <button className="menu-button" onClick={(e) => { e.stopPropagation(); setMenuOpen((prev) => !prev) }}>
                     ⋮
                 </button>
 
                 {menuOpen && (
-                    <div className="menu-dropdown">
+                    <div className="menu-dropdown" onClick={(e) => e.stopPropagation()}>
                         <div className="menu-section">
                             <p>Note Color</p>
 
