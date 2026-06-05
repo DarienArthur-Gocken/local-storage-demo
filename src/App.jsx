@@ -5,12 +5,18 @@ import "./App.css";
 
 export default function App() {
     const [notes, setNotes] = useState(() => {
-      const saved = localStorage.getItem("sticky-notes");
+        const saved = localStorage.getItem("sticky-notes");
 
-      return saved ? JSON.parse(saved) : [];
+        console.log("Loading notes from localStorage:", saved)
+
+        return saved ? JSON.parse(saved) : [];
     });
 
-    useEffect(() => { localStorage.setItem("sticky-notes", JSON.stringify(notes) ); }, [notes]);
+    useEffect(() => {
+        console.log("Saving notes to localStorage:", notes);
+
+        localStorage.setItem("sticky-notes", JSON.stringify(notes));
+    }, [notes]);
 
     function addNote() {
         const newNote = { id: crypto.randomUUID(), text: "", backgroundColor: "#FDE68A", textColor: "#111827", };
